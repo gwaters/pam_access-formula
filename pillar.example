@@ -1,0 +1,17 @@
+pam_access:
+  allowed_users:
+    john:
+      - '192.168.200.1'
+      - '192.168.200.4'
+    gary:
+      - 'ALL'
+    root:
+      - 'cron'
+      - 'tty1'
+      - ':0'
+    @somegroup:
+      - '127.0.0.0/24'
+      - '.foo.bar.og'
+  denied_users:
+    ALL:
+      - 'ALL'
