@@ -9,7 +9,9 @@ pam_access:
       - 'cron'
       - 'tty1'
       - ':0'
-    @somegroup:
+    some_group:
+      - '127.0.0.0/24'
+    @some_nis_group:
       - '127.0.0.0/24'
       - '.foo.bar.og'
   denied_users:
