@@ -14,6 +14,3 @@ pam_access-file:
     - name: {{ pam_access.conf_file }}
     - source: salt://pam_access/files/access.conf
     - template: jinja
-    - defaults:
-        allowed_users: {{ salt['pillar.get']('pam_access:allowed_users', {})}}
-        denied_users: {{ salt['pillar.get']('pam_access:denied_users', {})}}
